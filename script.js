@@ -1,6 +1,5 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission to handle it manually with fetch
-
+    event.preventDefault(); // Prevent default to handle manually
     const form = this;
     const formData = new FormData(form);
 
@@ -13,8 +12,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     })
     .then(response => {
         if (response.ok) {
-            alert('Form submitted! We will get back to you soon.');
-            form.reset(); // Clear form on success
+            form.reset(); // Clear form
+            window.location.href = '/index-thankyou.html'; // Redirect to thank-you page
         } else {
             alert('Error submitting the form. Please try again later.');
         }
