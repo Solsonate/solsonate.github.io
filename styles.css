@@ -146,7 +146,7 @@ header .header-content {
 
 header .logo {
     margin-right: 10px; /* Space between logo and text */
-    margin-left: 40px; /* Shift logo right from the edge */
+    margin-left: 80px; /* Shift logo right from the edge */
 }
 
 header .text-content {
