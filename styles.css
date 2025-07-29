@@ -137,3 +137,25 @@ a {
 a:hover {
     text-decoration: underline;
 }
+header .header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+header .logo {
+    margin-right: 20px; /* Space between logo and text */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header select {
+    margin-left: auto; /* Pushes language switcher to the right */
+}
