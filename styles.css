@@ -166,6 +166,8 @@ header p {
     margin: 5px 0;
     display: block;
     font-size: 1rem;
+    color: white; /* Ensure it’s visible against the orange background */
+    visibility: visible; /* Override any hidden state */
 }
 
 header select {
