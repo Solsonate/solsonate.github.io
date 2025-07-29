@@ -141,25 +141,25 @@ header .header-content {
     display: flex;
     align-items: center;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: center; /* Center the whole header content */
 }
 
 header .logo {
-    margin-right: 10px; /* Reduce space to avoid pushing text too far */
-    margin-left: 60px; /* Slightly reduce from 80px to fine-tune */
-    max-width: 150px; /* Ensure it doesn’t stretch */
+    margin-right: 20px; /* Space before text */
+    margin-left: 100px; /* Increase to move logo right */
+    max-width: 150px;
 }
 
 header .text-content {
     text-align: center;
     flex-grow: 1;
-    min-width: 0; /* Prevent text from overflowing */
+    min-width: 0;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
-    white-space: nowrap; /* Keep h1 on one line */
+    white-space: nowrap;
 }
 
 header p {
@@ -180,7 +180,7 @@ header select {
     header .logo {
         margin-right: 0;
         margin-bottom: 10px;
-        margin-left: 0; /* Reset on mobile */
+        margin-left: 0;
     }
     header .text-content {
         text-align: center;
