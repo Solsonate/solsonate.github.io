@@ -145,14 +145,14 @@ header .header-content {
 }
 
 header .logo {
-    margin-right: 20px; /* Space before text */
-    margin-left: 150px; /* Increase to move logo right */
+    margin-right: 0px; /* Space before text */
+    margin-left: 300px; /* Increase to move logo right */
     max-width: 150px;
 }
 
 header .text-content {
     text-align: center;
-    flex-grow: 1;
+    flex-grow: 0;
     min-width: 0;
 }
 
