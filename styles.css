@@ -141,16 +141,17 @@ header .header-content {
     display: flex;
     align-items: center;
     padding: 10px;
-    justify-content: space-between; /* Distributes space evenly */
+    justify-content: space-between;
 }
 
 header .logo {
     margin-right: 20px; /* Space between logo and text */
+    margin-left: 20px; /* Shift logo right from the edge */
 }
 
 header .text-content {
-    text-align: center; /* Centers h1 and p */
-    flex-grow: 1; /* Allows text to take available space */
+    text-align: center;
+    flex-grow: 1;
 }
 
 header h1 {
@@ -160,11 +161,12 @@ header h1 {
 
 header p {
     margin: 5px 0;
-    display: block; /* Ensures p is visible */
+    display: block; /* Ensure p is visible */
+    font-size: 1rem; /* Add size to make it noticeable */
 }
 
 header select {
-    margin-left: auto; /* Keeps language switcher on the right */
+    margin-left: auto;
 }
 
 @media (max-width: 600px) {
