@@ -146,7 +146,7 @@ header .header-content {
 
 header .logo {
     margin-right: 20px; /* Space before text */
-    margin-left: 100px; /* Increase to move logo right */
+    margin-left: 150px; /* Increase to move logo right */
     max-width: 150px;
 }
 
