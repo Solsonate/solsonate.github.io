@@ -161,8 +161,8 @@ header h1 {
 
 header p {
     margin: 5px 0;
-    display: block; /* Ensure p is visible */
-    font-size: 1rem; /* Add size to make it noticeable */
+    display: block;
+    font-size: 1rem;
 }
 
 header select {
