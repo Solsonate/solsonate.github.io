@@ -118,24 +118,26 @@ footer {
     }
     header .header-content {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Center all items */
         padding: 0;
         width: 100%;
     }
     header .logo {
         margin-right: 0;
         margin-bottom: 10px;
-        margin-left: 0; /* Keep your centering fix */
-        max-width: 120px;
+        margin-left: auto; /* Center by balancing margins */
+        margin-right: auto; /* Center by balancing margins */
+        max-width: 120px; /* Keep logo size reasonable */
     }
     header .text-content {
         text-align: center;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 10px; /* Prevent cutoff */
     }
     header h1 {
         font-size: 1.5rem;
-        white-space: normal;
+        white-space: normal; /* Allow wrapping to show 'nate' */
+        overflow: hidden; /* Prevent overflow */
     }
     header p {
         font-size: 1rem;
@@ -144,10 +146,10 @@ footer {
     #language-switcher {
         margin-left: 0;
         margin-top: 10px;
-        width: 100%; /* Full width */
-        max-width: 200px; /* Limit max width */
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
+        width: 100%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto; /* Keep centered */
     }
 }
 
