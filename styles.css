@@ -105,7 +105,7 @@ footer {
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) { /* Widened breakpoint for testing */
     .image-gallery {
         flex-direction: column;
         align-items: center;
@@ -118,25 +118,37 @@ footer {
     }
     header .header-content {
         flex-direction: column;
-        align-items: center; /* Center all items */
+        align-items: center;
         padding: 0;
         width: 100%;
+        min-width: 0;
     }
     header .logo {
+        margin-right: 0 !important;
         margin-bottom: 10px;
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
+        margin-left: auto !important;
+        margin-right: auto !important;
         max-width: 120px;
+        display: block;
+        text-align: center;
+        transform: translateX(0);
     }
     header .text-content {
         text-align: center;
         width: 100%;
-        padding: 0 5px; /* Reduce padding to give more width */
+        padding: 0 5px;
+        min-width: 0;
     }
     header h1 {
-        font-size: 1.3rem; /* Reduce slightly to fit */
-        white-space: normal; /* Ensure wrapping */
-        overflow: hidden; /* Prevent overflow */
+        font-size: 1.1rem !important;
+        white-space: normal !important;
+        overflow: hidden;
+        max-width: 100%;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        text-align: center;
     }
     header p {
         font-size: 1rem;
@@ -148,7 +160,7 @@ footer {
         width: 100%;
         max-width: 200px;
         margin-left: auto;
-        margin-right: auto; /* Keep centered */
+        margin-right: auto;
     }
 }
 
@@ -185,7 +197,7 @@ header .header-content {
     display: flex;
     align-items: center;
     padding: 10px;
-    justify-content: flex-start; /* Revert to original desktop layout */
+    justify-content: flex-start;
     min-height: 60px;
 }
 
@@ -222,4 +234,25 @@ header p {
 
 header select {
     margin-left: 20px;
+}
+
+/* Temporary Fallback for Testing */
+header h1 {
+    font-size: 1.1rem !important;
+    white-space: normal !important;
+    overflow: hidden;
+    max-width: 100%;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align: center;
+}
+header .logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 120px;
+    display: block;
+    text-align: center;
+    transform: translateX(0);
 }
