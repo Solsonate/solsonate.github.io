@@ -141,21 +141,21 @@ header .header-content {
     display: flex;
     align-items: center;
     padding: 10px;
-    justify-content: center; /* Keep centered but ensure space */
-    min-height: 60px; /* Ensure enough vertical space */
+    justify-content: flex-start; /* Align from left, let margins control centering */
+    min-height: 60px; /* Ensure vertical space */
 }
 
 header .logo {
-    margin-right: 150px; /* Space before text */
-    margin-left: 300px; /* Keep right shift */
+    margin-right: 20px; /* Reduce space before text */
+    margin-left: 150px; /* Reduce from 300px to shift logo less right */
     max-width: 150px;
 }
 
 header .text-content {
     text-align: center;
-    flex-grow: 1; /* Allow growth to accommodate p */
+    flex-grow: 1; /* Allow growth to center text */
     min-width: 0;
-    display: flex; /* Use flex to stack h1 and p */
+    display: flex; /* Stack h1 and p vertically */
     flex-direction: column; /* Stack vertically */
     justify-content: center; /* Center vertically */
 }
@@ -177,7 +177,7 @@ header p {
 }
 
 header select {
-    margin-left: auto;
+    margin-left: 20px; /* Reduce space from auto to control position */
 }
 
 @media (max-width: 600px) {
