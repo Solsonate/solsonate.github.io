@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #ff6200; /* Orange theme */
+    background-color: #ff6200;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -149,4 +149,76 @@ footer {
         margin-left: auto; /* Center horizontally */
         margin-right: auto; /* Center horizontally */
     }
+}
+
+#language-switcher {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-left: 250px;
+}
+
+.thank-you {
+    text-align: center;
+    padding: 2rem;
+}
+
+.thank-you h2 {
+    color: #2c3e50;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: flex-start; /* Revert to original desktop layout */
+    min-height: 60px;
+}
+
+header .logo {
+    margin-right: 20px;
+    margin-left: 150px;
+    max-width: 150px;
+}
+
+header .text-content {
+    text-align: center;
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+header p {
+    margin: 5px 0;
+    display: block !important;
+    font-size: 1.2rem;
+    color: white !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 1em;
+}
+
+header select {
+    margin-left: 20px;
 }
