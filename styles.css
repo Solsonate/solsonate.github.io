@@ -105,7 +105,7 @@ footer {
     width: 100%;
 }
 
-@media (max-width: 800px) { /* Widened breakpoint for testing */
+@media (max-width: 800px) {
     .image-gallery {
         flex-direction: column;
         align-items: center;
@@ -115,6 +115,8 @@ footer {
     }
     header {
         padding: 1rem;
+        width: 100%; /* Ensure full width */
+        box-sizing: border-box; /* Include padding in width */
     }
     header .header-content {
         flex-direction: column;
@@ -122,6 +124,7 @@ footer {
         padding: 0;
         width: 100%;
         min-width: 0;
+        margin: 0 auto; /* Center if needed */
     }
     header .logo {
         margin-right: 0 !important;
@@ -132,6 +135,10 @@ footer {
         display: block;
         text-align: center;
         transform: translateX(0);
+        /* Adjust SVG internal positioning if needed */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); /* Center SVG content */
     }
     header .text-content {
         text-align: center;
@@ -140,7 +147,7 @@ footer {
         min-width: 0;
     }
     header h1 {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important; /* Larger than p for hierarchy */
         white-space: normal !important;
         overflow: hidden;
         max-width: 100%;
@@ -151,16 +158,17 @@ footer {
         text-align: center;
     }
     header p {
-        font-size: 1rem;
+        font-size: 1rem; /* Smaller than h1 */
         white-space: normal;
     }
     #language-switcher {
         margin-left: 0;
         margin-top: 10px;
-        width: 100%;
-        max-width: 200px;
+        width: auto; /* Allow natural width */
+        max-width: 180px; /* Reduce to fit orange area */
         margin-left: auto;
         margin-right: auto;
+        box-sizing: border-box; /* Include padding in width */
     }
 }
 
@@ -234,25 +242,4 @@ header p {
 
 header select {
     margin-left: 20px;
-}
-
-/* Temporary Fallback for Testing */
-header h1 {
-    font-size: 1.1rem !important;
-    white-space: normal !important;
-    overflow: hidden;
-    max-width: 100%;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    text-align: center;
-}
-header .logo {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 120px;
-    display: block;
-    text-align: center;
-    transform: translateX(0);
 }
