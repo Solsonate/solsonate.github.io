@@ -125,18 +125,18 @@ footer {
     header .logo {
         margin-right: 0;
         margin-bottom: 10px;
-        margin-left: auto; /* Center by balancing margins */
-        margin-right: auto; /* Center by balancing margins */
-        max-width: 120px; /* Keep logo size reasonable */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+        max-width: 120px;
     }
     header .text-content {
         text-align: center;
         width: 100%;
-        padding: 0 10px; /* Prevent cutoff */
+        padding: 0 5px; /* Reduce padding to give more width */
     }
     header h1 {
-        font-size: 1.5rem;
-        white-space: normal; /* Allow wrapping to show 'nate' */
+        font-size: 1.3rem; /* Reduce slightly to fit */
+        white-space: normal; /* Ensure wrapping */
         overflow: hidden; /* Prevent overflow */
     }
     header p {
