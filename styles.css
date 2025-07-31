@@ -30,7 +30,7 @@ header .header-content {
 header .logo {
     margin-right: 20px;
     margin-left: 100px;
-    max-width: 150px;
+    max-width: 200px; /* Increased for bigger logo */
 }
 
 header .text-content {
@@ -209,7 +209,7 @@ a:focus {
     }
     header .logo {
         margin-left: 10px;
-        max-width: 100px;
+        max-width: 140px; /* Increased for bigger logo on tablet */
     }
     .image-gallery img {
         width: 100%;
@@ -226,7 +226,7 @@ a:focus {
     header .logo {
         margin: 0 auto 10px auto;
         display: block;
-        max-width: 80px;
+        max-width: 110px; /* Increased for bigger logo on mobile */
     }
     header .text-content {
         width: 100%;
