@@ -46,6 +46,8 @@ header h1 {
     margin: 0;
     font-size: 2rem;
     white-space: nowrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 header p {
@@ -223,9 +225,20 @@ a:focus {
     }
     header .logo {
         margin: 0 auto 10px auto;
+        display: block;
+        max-width: 80px;
     }
     header .text-content {
         width: 100%;
+        min-width: 0;
+        text-align: center;
+        word-break: break-word;
+    }
+    header h1 {
+        font-size: 1.3rem;
+        white-space: normal;
+        word-break: break-word;
+        padding: 0 10px;
     }
     #language-switcher {
         margin-left: 0;
