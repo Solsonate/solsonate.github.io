@@ -27,25 +27,76 @@ function changeLanguage() {
     const lang = document.getElementById('language-switcher').value;
     document.documentElement.lang = lang;
 
-    // Update header p
+    // Header description
     const headerP = document.querySelector('header .text-content p');
-    if (headerP) {
-        console.log("Header p found, setting text to:", headerP.getAttribute('data-' + lang));
+    if (headerP && headerP.hasAttribute('data-' + lang)) {
         headerP.textContent = headerP.getAttribute('data-' + lang);
-    } else {
-        console.log("Header p not found!");
     }
 
-    // Update other elements
-    document.getElementById('about-title').textContent = document.querySelector('.about').getAttribute('data-' + lang);
-    document.getElementById('about-text').textContent = document.getElementById('about-text').getAttribute('data-' + lang);
-    document.getElementById('work-title').textContent = document.getElementById('work-title').getAttribute('data-' + lang);
-    document.getElementById('contact-title').textContent = document.querySelector('.contact').getAttribute('data-' + lang);
-    document.querySelector('form label[for="name"]').textContent = document.querySelector('label[for="name"]').getAttribute('data-' + lang);
-    document.querySelector('form label[for="email"]').textContent = document.querySelector('label[for="email"]').getAttribute('data-' + lang);
-    document.querySelector('form label[for="message"]').textContent = document.querySelector('label[for="message"]').getAttribute('data-' + lang);
-    document.querySelector('form button').textContent = document.querySelector('form button').getAttribute('data-' + lang);
-    document.getElementById('footer-text').innerHTML = document.getElementById('footer-text').getAttribute('data-' + lang);
+    // About section
+    const about = document.querySelector('.about');
+    const aboutTitle = document.getElementById('about-title');
+    if (about && aboutTitle && about.hasAttribute('data-' + lang)) {
+        aboutTitle.textContent = about.getAttribute('data-' + lang);
+    }
+    const aboutText = document.getElementById('about-text');
+    if (aboutText && aboutText.hasAttribute('data-' + lang)) {
+        aboutText.textContent = aboutText.getAttribute('data-' + lang);
+    }
+
+    // Work section
+    const workTitle = document.getElementById('work-title');
+    if (workTitle && workTitle.hasAttribute('data-' + lang)) {
+        workTitle.textContent = workTitle.getAttribute('data-' + lang);
+    }
+
+    // Contact section
+    const contact = document.querySelector('.contact');
+    const contactTitle = document.getElementById('contact-title');
+    if (contact && contactTitle && contact.hasAttribute('data-' + lang)) {
+        contactTitle.textContent = contact.getAttribute('data-' + lang);
+    }
+
+    // Form labels and button
+    const nameLabel = document.querySelector('form label[for="name"]');
+    if (nameLabel && nameLabel.hasAttribute('data-' + lang)) {
+        nameLabel.textContent = nameLabel.getAttribute('data-' + lang);
+    }
+    const emailLabel = document.querySelector('form label[for="email"]');
+    if (emailLabel && emailLabel.hasAttribute('data-' + lang)) {
+        emailLabel.textContent = emailLabel.getAttribute('data-' + lang);
+    }
+    const messageLabel = document.querySelector('form label[for="message"]');
+    if (messageLabel && messageLabel.hasAttribute('data-' + lang)) {
+        messageLabel.textContent = messageLabel.getAttribute('data-' + lang);
+    }
+    const formButton = document.querySelector('form button');
+    if (formButton && formButton.hasAttribute('data-' + lang)) {
+        formButton.textContent = formButton.getAttribute('data-' + lang);
+    }
+
+    // Thank you section (for thank-you page)
+    const thankYouDiv = document.querySelector('.thank-you');
+    const thankYouTitle = document.getElementById('thank-you-title');
+    if (thankYouDiv && thankYouTitle && thankYouDiv.hasAttribute('data-' + lang)) {
+        thankYouTitle.textContent = thankYouDiv.getAttribute('data-' + lang);
+    }
+    const thankYouText = document.getElementById('thank-you-text');
+    if (thankYouText && thankYouText.hasAttribute('data-' + lang)) {
+        thankYouText.textContent = thankYouText.getAttribute('data-' + lang);
+    }
+
+    // Back to Home link (thank-you page)
+    const backHomeLink = document.querySelector('a[data-en][data-es]');
+    if (backHomeLink && backHomeLink.hasAttribute('data-' + lang)) {
+        backHomeLink.textContent = backHomeLink.getAttribute('data-' + lang);
+    }
+
+    // Footer
+    const footerText = document.getElementById('footer-text');
+    if (footerText && footerText.hasAttribute('data-' + lang)) {
+        footerText.innerHTML = footerText.getAttribute('data-' + lang);
+    }
 }
 
 // Set initial language to English
