@@ -208,12 +208,25 @@ a:focus {
         padding: 0 0.5rem;
     }
     header .logo {
-        margin-left: 100px; /* Restore this value */
-        max-width: 140px; /* Increased for bigger logo on tablet */
+        margin: 0 auto 10px auto; /* Center logo */
+        display: block;
+        max-width: 140px;
     }
     .image-gallery img {
         width: 100%;
         min-width: 0;
+    }
+    header .text-content {
+        text-align: center;
+        word-break: break-word;
+        white-space: normal; /* Allow wrapping */
+        min-width: 0;
+    }
+    header h1 {
+        font-size: 1.5rem;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 }
 
@@ -229,11 +242,20 @@ a:focus {
         max-width: 110px;
     }
     #language-switcher {
-        margin-left: 0;
-        margin-top: 10px;
+        margin: 10px auto 10px auto;
         display: block;
-        margin-right: auto;
-        margin-bottom: 10px;
-        margin: 0 auto 10px auto; /* Add this line to center */
+        text-align: center;
+    }
+    header .text-content {
+        text-align: center;
+        word-break: break-word;
+        white-space: normal;
+        min-width: 0;
+    }
+    header h1 {
+        font-size: 1.2rem;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 }
