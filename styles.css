@@ -226,26 +226,13 @@ a:focus {
     header .logo {
         margin: 0 auto 10px auto;
         display: block;
-        max-width: 110px; /* Increased for bigger logo on mobile */
-    }
-    header .text-content {
-        width: 100%;
-        min-width: 0;
-        text-align: center;
-        word-break: break-word;
-    }
-    header h1 {
-        font-size: 1.3rem;
-        white-space: normal;
-        word-break: break-word;
-        padding: 0 10px;
+        max-width: 110px;
     }
     #language-switcher {
         margin-left: 0;
         margin-top: 10px;
-    }
-    .image-gallery {
-        flex-direction: column;
-        gap: 0.5rem;
+        display: block;
+        margin-right: auto;
+        margin-bottom: 10px;
     }
 }
