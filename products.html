@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Solar Solutions Sonsonate - Products</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <svg class="logo" width="150" height="60" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solar Solutions Sonsonate Logo">
+                <text x="100" y="40" font-family="Arial" font-size="30" fill="yellow" text-anchor="middle">
+                    <tspan>S</tspan>
+                    <tspan dx="20" dy="0">lsonate</tspan>
+                </text>
+                <circle cx="62" cy="30" r="12" fill="yellow" stroke="black" stroke-width="1"/>
+            </svg>
+            <div class="text-content">
+                <h1>Solar Solutions Sonsonate</h1>
+                <p id="header-desc" data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">
+                    Your Trusted Partner for Solar Energy in El Salvador
+                </p>
+            </div>
+            <label for="language-switcher" class="visually-hidden">Language</label>
+            <select id="language-switcher" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="products" data-en="Our Products" data-es="Nuestros Productos">
+            <h2 id="products-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3 data-en="Product 1" data-es="Producto 1">Product 1</h3>
+                    <p data-en="Description of Product 1." data-es="Descripción del Producto 1.">Description of Product 1.</p>
+                    <p class="price" data-en="$100.00" data-es="$100.00">$100.00</p>
+                    <button data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3 data-en="Product 2" data-es="Producto 2">Product 2</h3>
+                    <p data-en="Description of Product 2." data-es="Descripción del Producto 2.">Description of Product 2.</p>
+                    <p class="price" data-en="$150.00" data-es="$150.00">$150.00</p>
+                    <button data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3 data-en="Product 3" data-es="Producto 3">Product 3</h3>
+                    <p data-en="Description of Product 3." data-es="Descripción del Producto 3.">Description of Product 3.</p>
+                    <p class="price" data-en="$200.00" data-es="$200.00">$200.00</p>
+                    <button data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="product4.jpg" alt="Product 4">
+                    <h3 data-en="Product 4" data-es="Producto 4">Product 4</h3>
+                    <p data-en="Description of Product 4." data-es="Descripción del Producto 4.">Description of Product 4.</p>
+                    <p class="price" data-en="$250.00" data-es="$250.00">$250.00</p>
+                    <button data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
+            &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
