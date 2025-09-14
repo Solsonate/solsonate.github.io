@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Our Products - Solar Solutions Sonsonate</title>
+    <title>Solar Solutions Sonsonate</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,9 +17,9 @@
                 <circle cx="62" cy="30" r="12" fill="yellow" stroke="black" stroke-width="1"/>
             </svg>
             <div class="text-content">
-                <h1>Our Products</h1>
-                <p id="header-desc" data-en="Explore our range of solar products." data-es="Explora nuestra gama de productos solares.">
-                    Explore our range of solar products.
+                <h1>Solar Solutions Sonsonate</h1>
+                <p id="header-desc" data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">
+                    Your Trusted Partner for Solar Energy in El Salvador
                 </p>
             </div>
             <label for="language-switcher" class="visually-hidden">Language</label>
@@ -30,51 +29,48 @@
             </select>
         </div>
         <nav class="main-nav">
-            <a href="index.html" class="nav-btn">Home</a>
-            <a href="products.html" class="nav-btn">Products</a>
+            <a href="index.html" class="nav-btn" data-en="Home" data-es="Inicio">Home</a>
+            <a href="products.html" class="nav-btn" data-en="Products" data-es="Productos">Products</a>
         </nav>
     </header>
 
-    <section class="product-list">
-        <h2 data-en="Our Products" data-es="Nuestros Productos">Our Products</h2>
-        <div class="products">
-            <div class="product-item">
-                <img src="solar_panel.jpg" alt="Solar Panel">
-                <h3 data-en="Solar Panel" data-es="Panel Solar">Solar Panel</h3>
-                <p data-en="High-efficiency solar panel for residential use." data-es="Panel solar de alta eficiencia para uso residencial.">
-                    High-efficiency solar panel for residential use.
-                </p>
-            </div>
-            <div class="product-item">
-                <img src="inverter.jpg" alt="Inverter">
-                <h3 data-en="Inverter" data-es="Inversor">Inverter</h3>
-                <p data-en="Reliable inverter for converting solar energy." data-es="Inversor confiable para convertir energía solar.">
-                    Reliable inverter for converting solar energy.
-                </p>
-            </div>
-            <div class="product-item">
-                <img src="battery.jpg" alt="Battery Storage">
-                <h3 data-en="Battery Storage" data-es="Almacenamiento de Baterías">Battery Storage</h3>
-                <p data-en="Store excess solar energy for later use." data-es="Almacene el exceso de energía solar para su uso posterior.">
-                    Store excess solar energy for later use.
-                </p>
-            </div>
-            <div class="product-item">
-                <img src="mounting_system.jpg" alt="Mounting System">
-                <h3 data-en="Mounting System" data-es="Sistema de Montaje">Mounting System</h3>
-                <p data-en="Durable mounting system for solar panels." data-es="Sistema de montaje duradero para paneles solares.">
-                    Durable mounting system for solar panels.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
-            &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+<section class="main-content">
+    <div class="about" data-en="About Us" data-es="Sobre Nosotros">
+        <h2 id="about-title">About Us</h2>
+        <p id="about-text" data-en="We specialize in the installation and sale of solar panels and photovoltaic systems in Sonsonate, El Salvador. Our mission is to provide sustainable, reliable, and cost-effective solar energy solutions to power your home or business." data-es="Nos especializamos en la instalación y venta de paneles solares y sistemas fotovoltaicos en Sonsonate, El Salvador. Nuestra misión es proporcionar soluciones de energía solar sostenibles, confiables y rentables para alimentar su hogar o negocio.">
+            We specialize in the installation and sale of solar panels and photovoltaic systems in Sonsonate, El Salvador. Our mission is to provide sustainable, reliable, and cost-effective solar energy solutions to power your home or business.
         </p>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
-</body>
+    <div class="images">
+        <h2 id="work-title" data-en="Our Work" data-es="Nuestro Trabajo">Our Work</h2>
+        <div class="image-gallery">
+            <img src="solar_panel_installation.jpeg" alt="Solar Panel Installation">
+            <img src="photovoltaic_system.jpeg" alt="Photovoltaic System">
+            <img src="container_house.jpeg" alt="Container House">
+            <img src="sistema_mobil.jpeg" alt="Sistema mobil">
+        </div>
+    </div>
+
+    <div class="contact" data-en="Contact Us" data-es="Contáctenos">
+        <h2 id="contact-title">Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/xnnzvnwa" method="POST">
+            <label for="name" data-en="Name:" data-es="Nombre:">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email" data-en="Email:" data-es="Correo:">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message" data-en="Message:" data-es="Mensaje:">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" data-en="Send" data-es="Enviar">Send</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
+        &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+    </p>
+</footer>
+
+<script src="script.js"></script></body>
 </html>
