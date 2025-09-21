@@ -104,6 +104,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     if (footerText && footerText.hasAttribute('data-' + lang)) {
         footerText.innerHTML = footerText.getAttribute('data-' + lang);
     }
+
+    // Update navigation links in the footer (and anywhere else)
+    document.querySelectorAll('nav.main-nav a[data-en][data-es]').forEach(function(link) {
+        link.textContent = link.getAttribute('data-' + lang);
+    });
 }
 
 window.addEventListener('DOMContentLoaded', function() {
