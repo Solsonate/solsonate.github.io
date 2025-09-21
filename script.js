@@ -106,11 +106,13 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
 }
 
-// Set initial language to English
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLang') || 'en';
     const switcher = document.getElementById('language-switcher');
-    if (switcher) switcher.value = savedLang;
+    if (switcher) {
+        switcher.value = savedLang;
+        switcher.addEventListener('change', changeLanguage);
+    }
     changeLanguage();
-};
+});
 
