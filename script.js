@@ -20,6 +20,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     alert('An error occurred. Please try again later.');
 });});function changeLanguage() {
     const lang = document.getElementById('language-switcher').value;
+    localStorage.setItem('selectedLang', lang); // Save language
     document.documentElement.lang = lang;
 
     // Header description
@@ -107,6 +108,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 // Set initial language to English
 window.onload = function() {
+    const savedLang = localStorage.getItem('selectedLang') || 'en';
+    const switcher = document.getElementById('language-switcher');
+    if (switcher) switcher.value = savedLang;
     changeLanguage();
 };
 
