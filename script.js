@@ -110,9 +110,9 @@ window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLang') || 'en';
     const switcher = document.getElementById('language-switcher');
     if (switcher) {
-        switcher.value = savedLang;
+        switcher.value = savedLang; // Set the select to saved language
         switcher.addEventListener('change', changeLanguage);
     }
-    changeLanguage();
+    changeLanguage(); // Now call changeLanguage, which will use the correct value
 });
 
