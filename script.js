@@ -20,20 +20,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     alert('An error occurred. Please try again later.');
 });});function changeLanguage() {
     const lang = document.getElementById('language-switcher').value;
-    localStorage.setItem('selectedLang', lang); // Save language
+    localStorage.setItem('selectedLang', lang);
     document.documentElement.lang = lang;
 
     // Update all elements with data-en and data-es
     document.querySelectorAll('[data-en][data-es]').forEach(function(el) {
-        // Use innerHTML for <p>, <footer> <p>, and <h2> (if you use <br> or <strong>)
+        // Use innerHTML for <p> and footer <p> (with HTML formatting)
         if (
             el.tagName === 'P' ||
-            (el.tagName === 'H2' && (el.getAttribute('data-en').includes('<br>') || el.getAttribute('data-es').includes('<br>'))) ||
             (el.id === 'footer-text')
         ) {
             el.innerHTML = el.getAttribute('data-' + lang);
         } else {
-            // Use textContent for <h1>, <h3>, <a>, etc.
+            // Use textContent for <h1>, <h2>, <h3>, <a>, etc.
             el.textContent = el.getAttribute('data-' + lang);
         }
     });
