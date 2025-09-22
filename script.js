@@ -23,6 +23,22 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     localStorage.setItem('selectedLang', lang); // Save language
     document.documentElement.lang = lang;
 
+    // Update all elements with data-en and data-es
+    document.querySelectorAll('[data-en][data-es]').forEach(function(el) {
+        // Use innerHTML for <p>, <footer> <p>, and <h2> (if you use <br> or <strong>)
+        if (
+            el.tagName === 'P' ||
+            (el.tagName === 'H2' && (el.getAttribute('data-en').includes('<br>') || el.getAttribute('data-es').includes('<br>'))) ||
+            (el.id === 'footer-text')
+        ) {
+            el.innerHTML = el.getAttribute('data-' + lang);
+        } else {
+            // Use textContent for <h1>, <h3>, <a>, etc.
+            el.textContent = el.getAttribute('data-' + lang);
+        }
+    });
+}
+
     // Header description
     const headerP = document.querySelector('header .text-content p');
     if (headerP && headerP.hasAttribute('data-' + lang)) {
@@ -115,9 +131,9 @@ window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLang') || 'en';
     const switcher = document.getElementById('language-switcher');
     if (switcher) {
-        switcher.value = savedLang; // Set the select to saved language
+        switcher.value = savedLang;
         switcher.addEventListener('change', changeLanguage);
     }
-    changeLanguage(); // Now call changeLanguage, which will use the correct value
+    changeLanguage();
 });
 
