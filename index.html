@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Solar Solutions Sonsonate</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <svg class="logo" width="150" height="60" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solar Solutions Sonsonate Logo">
+                <text x="100" y="40" font-family="Arial" font-size="30" fill="yellow" text-anchor="middle">
+                    <tspan>S</tspan>
+                    <tspan dx="20" dy="0">lsonate</tspan>
+                </text>
+                <circle cx="62" cy="30" r="12" fill="yellow" stroke="black" stroke-width="1"/>
+            </svg>
+            <div class="text-content">
+                <h1>Solar Solutions Sonsonate</h1>
+                <p id="header-desc" data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">
+                    Your Trusted Partner for Solar Energy in El Salvador
+                </p>
+            </div>
+            <label for="language-switcher" class="visually-hidden">Language</label>
+            <select id="language-switcher" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    
+    </header>
+
+<section class="main-content">
+    <div class="about" data-en="About Us" data-es="Sobre Nosotros">
+        <h2 id="about-title">About Us</h2>
+        <p id="about-text" data-en="We specialize in the installation and sale of solar panels and photovoltaic systems in Sonsonate, El Salvador. Our mission is to provide sustainable, reliable, and cost-effective solar energy solutions to power your home or business." data-es="Nos especializamos en la instalación y venta de paneles solares y sistemas fotovoltaicos en Sonsonate, El Salvador. Nuestra misión es proporcionar soluciones de energía solar sostenibles, confiables y rentables para alimentar su hogar o negocio.">
+            We specialize in the installation and sale of solar panels and photovoltaic systems in Sonsonate, El Salvador. Our mission is to provide sustainable, reliable, and cost-effective solar energy solutions to power your home or business.
+        </p>
+    </div>
+
+    <div class="images">
+        <h2 id="work-title" data-en="Our Work" data-es="Nuestro Trabajo">Our Work</h2>
+        <div class="image-gallery">
+            <img src="solar_panel_installation.jpeg" alt="Solar Panel Installation">
+            <img src="photovoltaic_system.jpeg" alt="Photovoltaic System">
+            <img src="container_house.jpeg" alt="Container House">
+            <img src="sistema_mobil.jpeg" alt="Sistema mobil">
+        </div>
+    </div>
+
+    <div class="contact" data-en="Contact Us" data-es="Contáctenos">
+        <h2 id="contact-title">Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/xnnzvnwa" method="POST">
+            <label for="name" data-en="Name:" data-es="Nombre:">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email" data-en="Email:" data-es="Correo:">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message" data-en="Message:" data-es="Mensaje:">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" data-en="Send" data-es="Enviar">Send</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-btn" data-en="Home" data-es="Inicio">Home</a>
+        <a href="products.html" class="nav-btn" data-en="Products" data-es="Productos">Products</a>
+    </nav>
+    <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
+        &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+    </p>
+</footer>
+
+<script src="script.js"></script></body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thank You - Solar Solutions Sonsonate</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <svg class="logo" width="150" height="60" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solar Solutions Sonsonate Logo">
+                <text x="100" y="40" font-family="Arial" font-size="30" fill="yellow" text-anchor="middle">
+                    <tspan>S</tspan>
+                    <tspan dx="20" dy="0">lsonate</tspan>
+                </text>
+                <circle cx="62" cy="30" r="12" fill="yellow" stroke="black" stroke-width="1"/>
+            </svg>
+            <div class="text-content">
+                <h1>Solar Solutions Sonsonate</h1>
+                <p data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">
+                    Your Trusted Partner for Solar Energy in El Salvador
+                </p>
+            </div>
+            <label for="language-switcher" class="visually-hidden">Language</label>
+            <select id="language-switcher" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="thank-you" data-en="Thank You!" data-es="¡Gracias!">
+            <h2 id="thank-you-title">Thank You!</h2>
+            <p id="thank-you-text" data-en="Thank you for contacting us. We will get back to you soon!" data-es="Gracias por contactarnos. ¡Nos pondremos en contacto con usted pronto!">
+                Thank you for contacting us. We will get back to you soon!
+            </p>
+        </div>
+        <a href="/" data-en="Back to Home" data-es="Volver a Inicio">Back to Home</a>
+    </section>
+
+    <footer>
+        <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
+            &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language-switcher').value;
+            document.documentElement.lang = lang;
+
+            document.querySelector('header p').textContent = document.querySelector('header p').getAttribute('data-' + lang);
+            document.getElementById('thank-you-title').textContent = document.querySelector('.thank-you').getAttribute('data-' + lang);
+            document.getElementById('thank-you-text').textContent = document.getElementById('thank-you-text').getAttribute('data-' + lang);
+            document.querySelector('a').textContent = document.querySelector('a').getAttribute('data-' + lang);
+            document.getElementById('footer-text').innerHTML = document.getElementById('footer-text').getAttribute('data-' + lang);
+        }
+
+        window.onload = function() {
+            changeLanguage();
+        };
+    </script>
+</body>
+</html>
