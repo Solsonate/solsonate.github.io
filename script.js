@@ -89,8 +89,10 @@ if (backHomeLink && backHomeLink.hasAttribute('data-' + lang)) {
 const footerText = document.getElementById('footer-text');
 if (footerText && footerText.hasAttribute('data-' + lang)) {
     footerText.innerHTML = footerText.getAttribute('data-' + lang);
-}}// Set initial language to English
+}}// Set initial language to Spanish
 window.onload = function() {
+    const switcher = document.getElementById('language-switcher');
+    if (switcher) { switcher.value = 'es'; }
     changeLanguage();
 };
 
