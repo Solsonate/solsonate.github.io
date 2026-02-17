@@ -20,6 +20,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     alert('An error occurred. Please try again later.');
 });});function changeLanguage() {
     const lang = document.getElementById('language-switcher').value;
+        // Persist selection
+        try { localStorage.setItem('site-lang', lang); } catch (e) {}
     document.documentElement.lang = lang;// Header description
 const headerP = document.querySelector('header .text-content p');
 if (headerP && headerP.hasAttribute('data-' + lang)) {
@@ -92,7 +94,9 @@ if (footerText && footerText.hasAttribute('data-' + lang)) {
 }}// Set initial language to Spanish
 window.onload = function() {
     const switcher = document.getElementById('language-switcher');
-    if (switcher) { switcher.value = 'es'; }
+    const saved = (function(){ try { return localStorage.getItem('site-lang'); } catch(e){ return null; }})();
+    const initial = saved || 'es';
+    if (switcher) { switcher.value = initial; }
     changeLanguage();
 };
 
