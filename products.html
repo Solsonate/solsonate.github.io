@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Products - Solar Solutions Sonsonate</title>
+    <title>Productos - Solar Solutions Sonsonate</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" media="all" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <svg class="logo" width="150" height="60" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solar Solutions Sonsonate Logo">
-                <text x="100" y="40" font-family="Arial" font-size="30" fill="yellow" text-anchor="middle">
-                    <tspan>S</tspan>
-                    <tspan dx="20" dy="0">lsonate</tspan>
-                </text>
-                <circle cx="62" cy="30" r="12" fill="yellow" stroke="black" stroke-width="1"/>
-            </svg>
-            <div class="text-content">
-                <h1>Solar Solutions Sonsonate</h1>
-                <p id="header-desc" data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">
-                    Your Trusted Partner for Solar Energy in El Salvador
-                </p>
+    <!-- MAIN HEADER: logo + CTA (sticky) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun h-8 w-8 text-primary transition-transform duration-500"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                    <span class="font-sans font-bold text-xl text-gray-800 tracking-tight">SOLSONATE</span>
+                </div>
+                <!-- CTA Button -->
+                <div class="flex">
+                    <a href="index.html#contact" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transform hover:-translate-y-0.5" data-en="Get a Quote" data-es="Cotizar Ahora">
+                        Cotizar Ahora
+                    </a>
+                </div>
             </div>
-            <label for="language-switcher" class="visually-hidden">Language</label>
-            <select id="language-switcher" onchange="changeLanguage()">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-            </select>
         </div>
     </header>
 
-    <section class="product-list">
-        <h2 data-en="Products" data-es="Productos">Products</h2>
+    <!-- SECONDARY HEADER: title, description and language switcher (separate) -->
+    <header class="secondary-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-content">
+                <div class="text-content">
+                    <h1>Solar Solutions Sonsonate</h1>
+                    <p id="header-desc" data-en="Your Trusted Partner for Solar Energy in El Salvador" data-es="Su socio de confianza para la energía solar en El Salvador">Su socio de confianza para la energía solar en El Salvador</p>
+                </div>
+                <label for="language-switcher" class="visually-hidden">Language</label>
+                <select id="language-switcher" onchange="changeLanguage()">
+                    <option value="es" selected="">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+<section class="main-content">
+        <h2 data-en="Products" data-es="Productos" id="products-title">Productos</h2>
         <div class="products">
             <!-- Product 1 -->
             <article class="product-item placeholder" role="button" tabindex="0" aria-expanded="false">
@@ -210,11 +224,11 @@
 
     <footer>
         <nav class="main-nav">
-            <a href="index.html" class="nav-btn" data-en="Home" data-es="Inicio">Home</a>
-            <a href="products.html" class="nav-btn" data-en="Products" data-es="Productos">Products</a>
+            <a href="index.html" class="nav-btn" data-en="Home" data-es="Inicio">Inicio</a>
+            <a href="products.html" class="nav-btn" data-en="Products" data-es="Productos">Productos</a>
         </nav>
         <p id="footer-text" data-en="&copy; 2025 Solar Solutions Sonsonate. All rights reserved." data-es="&copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.">
-            &copy; 2025 Solar Solutions Sonsonate. All rights reserved.
+            &copy; 2025 Solar Solutions Sonsonate. Todos los derechos reservados.
         </p>
     </footer>
 

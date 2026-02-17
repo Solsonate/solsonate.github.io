@@ -45,6 +45,12 @@ if (workTitle && workTitle.hasAttribute('data-' + lang)) {
     workTitle.textContent = workTitle.getAttribute('data-' + lang);
 }
 
+// Products section (for products page)
+const productsTitle = document.getElementById('products-title');
+if (productsTitle && productsTitle.hasAttribute('data-' + lang)) {
+    productsTitle.textContent = productsTitle.getAttribute('data-' + lang);
+}
+
 // Contact section
 const contact = document.querySelector('.contact');
 const contactTitle = document.getElementById('contact-title');
