@@ -263,12 +263,13 @@ footer a:hover, footer a:focus { text-decoration: underline; }
 
 /* Embedded calculator iframe styling */
 .calculator-embed { max-width: 1000px; margin: 2rem auto; }
-.calculator-iframe { width: 100%; height: 800px; border: none; }
+.calculator-iframe {
+  width: 100%;
+  height: auto !important;       /* lascia espandere naturalmente */
+  min-height: 700px;             /* sicurezza per schermi piccoli */
+  border: none;
+  display: block;
+}
 
-/* make iframe responsive on smaller screens */
-@media (max-width: 800px) {
-    .calculator-iframe { height: 600px; }
-}
-@media (max-width: 600px) {
-    .calculator-iframe { height: 500px; }
-}
+/* note: height will be adjusted via script for exact content height */
+/* remove hard-coded media-specific heights */

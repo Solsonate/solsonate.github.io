@@ -9,16 +9,17 @@
       font-family: Arial, sans-serif;
       background: #f9f9f9;
       margin: 0;
-      padding: 20px;
+      padding: 10px 0;
     }
     .widget-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-      overflow: hidden;
-    }
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  overflow: visible;           /* importante: no hidden/auto */
+  /* rimuovi completamente max-height e overflow-y */
+}
     .header {
       background: #f0f8ff;
       padding: 20px;
@@ -107,10 +108,15 @@
 
     /* only stack on very narrow viewports (phones) */
     @media (max-width: 600px) {
-      .main-content { flex-direction: column; gap: 20px; padding: 16px; }
-      .results-section { padding: 20px; }
-      /* set fixed calculator width on mobile devices */
-      .widget-container { width: 390px; max-width: 100%; }
+      /* reduce outer padding to give more vertical room */
+      body { padding: 10px 0; }
+
+      /* stack inputs/results vertically */
+      .main-content { flex-direction: column; gap: 16px; padding: 12px; }
+      .results-section { padding: 16px; }
+
+      /* allow container to shrink, avoid forcing extra height */
+      .widget-container { width: 100%; max-width: 390px; margin: 0 auto; }
     }
   </style>
 </head>
