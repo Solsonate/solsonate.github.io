@@ -104,5 +104,6 @@ window.onload = function() {
     const initial = saved || 'es';
     if (switcher) { switcher.value = initial; }
     changeLanguage();
+};
 
 
