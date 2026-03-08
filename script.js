@@ -62,10 +62,9 @@ if (productsTitle && productsTitle.hasAttribute('data-' + lang)) {
 }
 
 // Contact section
-const contact = document.querySelector('.contact');
 const contactTitle = document.getElementById('contact-title');
-if (contact && contactTitle && contact.hasAttribute('data-' + lang)) {
-    contactTitle.textContent = contact.getAttribute('data-' + lang);
+if (contactTitle && contactTitle.hasAttribute('data-' + lang)) {
+    contactTitle.textContent = contactTitle.getAttribute('data-' + lang);
 }
 
 // Form labels and button
