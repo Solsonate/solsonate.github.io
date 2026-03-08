@@ -45,6 +45,17 @@ if (workTitle && workTitle.hasAttribute('data-' + lang)) {
     workTitle.textContent = workTitle.getAttribute('data-' + lang);
 }
 
+// Savings / Ahorro section
+const ahorro = document.querySelector('.ahorro');
+const ahorroTitle = document.getElementById('ahorro-title');
+if (ahorro && ahorroTitle && ahorro.hasAttribute('data-' + lang)) {
+    ahorroTitle.textContent = ahorro.getAttribute('data-' + lang);
+}
+const ahorroText = document.getElementById('ahorro-text');
+if (ahorroText && ahorroText.hasAttribute('data-' + lang)) {
+    ahorroText.textContent = ahorroText.getAttribute('data-' + lang);
+}
+
 // Products section (for products page)
 const productsTitle = document.getElementById('products-title');
 if (productsTitle && productsTitle.hasAttribute('data-' + lang)) {
@@ -97,7 +108,17 @@ if (backHomeLink && backHomeLink.hasAttribute('data-' + lang)) {
 const footerText = document.getElementById('footer-text');
 if (footerText && footerText.hasAttribute('data-' + lang)) {
     footerText.innerHTML = footerText.getAttribute('data-' + lang);
-}}// Set initial language to Spanish
+}
+
+// Generic translation for any element with both data-en and data-es (e.g. new Tesla-style block)
+document.querySelectorAll('[data-en][data-es]').forEach(el => {
+    if (el.hasAttribute('data-' + lang)) {
+        el.textContent = el.getAttribute('data-' + lang);
+    }
+});
+}
+
+// Set initial language to Spanish
 window.onload = function() {
     const switcher = document.getElementById('language-switcher');
     const saved = (function(){ try { return localStorage.getItem('site-lang'); } catch(e){ return null; }})();

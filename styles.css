@@ -137,7 +137,7 @@ header a[href*="#contact"]:focus {
     margin: 2rem auto;
     padding: 0 1rem;
 }
-.about, .images, .contact {
+.about, .images, .contact, .ahorro {
     margin-bottom: 2rem;
 }
 h2 {
@@ -222,6 +222,7 @@ footer .main-nav { display: flex; justify-content: center; gap: 1.5rem; }
 footer .nav-btn { background-color: #333; color: white; padding: 0.6rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.2s; font-size: 1rem; border: none; outline: none; display: inline-block; }
 footer .nav-btn:hover, footer .nav-btn:focus { background-color: #333; }
 footer #footer-text { text-align: center; }
+
 #language-switcher { margin-top: 0rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; border-radius: 4px; }
 .thank-you { text-align: center; padding: 2rem; }
 .thank-you h2 { color: #2c3e50; }
@@ -246,6 +247,55 @@ footer a:hover, footer a:focus { text-decoration: underline; }
       width: 100%;
       max-width: 100%;
     }
+}
+
+/* spacing for the info module inserted after ahorro */
+
+/* override for ahorro section heading */
+/* original selector would only target elements inside a .ahorro container; the
+   cards live inside .info-module, so use attribute-based selectors to precisely
+   match their headings. We now target both the "Ahorro en la factura" and
+   "Energía Sostenible" cards. */
+.info-module .card h2[data-es="Ahorro en la factura"],
+.info-module .card h2[data-en="Monthly Bill Savings"],
+.info-module .card h2[data-es="Energía Sostenible"],
+.info-module .card h2[data-en="Sustainable Energy"] {
+    color: #000 !important; /* force override */
+    font-weight: 700;
+}
+.info-module {
+    margin-top: 2rem;
+}
+
+.info-module .info-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info-module .card {
+    flex: 1;
+    min-width: 220px;
+    background: #e8ebee;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-module .card .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.info-module h1, .info-module h2 {
+    color: var(--primary);
+}
+
+/* generic spacing and text within info-module */
+.info-module p {
+    margin-top: 0.5rem;
+    line-height: 1.5;
 }
 @media (max-width: 600px) {
     header .flex { flex-direction: column; align-items: center; gap: 0.5rem; height: auto; padding: 0.75rem 0; }
