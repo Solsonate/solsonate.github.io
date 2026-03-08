@@ -29,10 +29,9 @@ if (headerP && headerP.hasAttribute('data-' + lang)) {
 }
 
 // About section
-const about = document.querySelector('.about');
 const aboutTitle = document.getElementById('about-title');
-if (about && aboutTitle && about.hasAttribute('data-' + lang)) {
-    aboutTitle.textContent = about.getAttribute('data-' + lang);
+if (aboutTitle && aboutTitle.hasAttribute('data-' + lang)) {
+    aboutTitle.textContent = aboutTitle.getAttribute('data-' + lang);
 }
 const aboutText = document.getElementById('about-text');
 if (aboutText && aboutText.hasAttribute('data-' + lang)) {
@@ -111,8 +110,9 @@ if (footerText && footerText.hasAttribute('data-' + lang)) {
 }
 
 // Generic translation for any element with both data-en and data-es (e.g. new Tesla-style block)
+// only translate leaf nodes so we don't wipe out entire sections
 document.querySelectorAll('[data-en][data-es]').forEach(el => {
-    if (el.hasAttribute('data-' + lang)) {
+    if (el.children.length === 0 && el.hasAttribute('data-' + lang)) {
         el.textContent = el.getAttribute('data-' + lang);
     }
 });
