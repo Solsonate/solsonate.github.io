@@ -269,8 +269,9 @@ footer a:hover, footer a:focus { text-decoration: underline; }
 
 .info-module .info-cards {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* more space between cards */
     flex-wrap: wrap;
+    margin-top: 2rem; /* vertical gap between info-module text and card group */
 }
 
 .info-module .card {
@@ -280,6 +281,7 @@ footer a:hover, footer a:focus { text-decoration: underline; }
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 0.5rem; /* reduce now that container provides spacing */
 }
 
 .info-module .card .icon {
