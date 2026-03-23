@@ -249,6 +249,16 @@ footer a:hover, footer a:focus { text-decoration: underline; }
     }
 }
 
+/* Regola ancora più specifica SOLO per blackout.jpg */
+.info-module img[src*="blackout.jpg"],
+.info-module img[alt*="Blackout"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;            /* mantiene proporzioni intere, no deformazione */
+    /* oppure object-fit: cover; se preferisci ritagliare invece di lasciare spazi */
+}
+
 /* spacing for the info module inserted after ahorro */
 
 /* override for ahorro section heading */
