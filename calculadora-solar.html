@@ -154,7 +154,7 @@
 
       <div class="field">
         <div class="label">Tarifa eléctrica ($/kWh)</div>
-        <input type="number" id="tarifa" class="number-input" value="0.13" min="0.01" max="1" step="0.01">
+        <input type="number" id="tarifa" class="number-input" value="0.29" min="0.01" max="1" step="0.01">
         <div class="small">Electricity Rate ($/kWh)</div>
       </div>
 
@@ -211,7 +211,7 @@ syncInputs('horas_sol',  'horas_sol_num');
 function calculate() {
   let consumo   = parseFloat(document.getElementById('consumo').value)    || 100;
   let horas_sol = parseFloat(document.getElementById('horas_sol').value)  || 5;
-  let tarifa    = parseFloat(document.getElementById('tarifa').value)     || 0.13;
+  let tarifa    = parseFloat(document.getElementById('tarifa').value)     || 0.29;
 
   // Ahorro anual
   let ahorroAnual = Math.floor(consumo * 12 * tarifa * 100) / 100;
