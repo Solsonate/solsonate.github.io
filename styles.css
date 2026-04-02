@@ -221,6 +221,43 @@ footer .map-container {
 footer .main-nav { display: flex; justify-content: center; gap: 1.5rem; }
 footer .nav-btn { background-color: #333; color: white; padding: 0.6rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.2s; font-size: 1rem; border: none; outline: none; display: inline-block; }
 footer .nav-btn:hover, footer .nav-btn:focus { background-color: #333; }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+.footer-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.24);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.45);
+  transform: translateY(-2px);
+}
+.footer-social .social-link.whatsapp .social-icon {
+  color: #25D366;
+}
+.footer-social .social-link.facebook .social-icon {
+  color: #1877F2;
+}
+.footer-social .social-icon {
+  font-size: 1rem;
+}
+
 footer #footer-text { text-align: center; }
 
 #language-switcher { margin-top: 0rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; border-radius: 4px; }
