@@ -14,7 +14,7 @@ if (contactForm) {
         .then(response => {
             if (response.ok) {
                 form.reset(); // Clear form
-                window.location.href = '/index-thankyou.html'; // Redirect to thank-you page
+                // Formspree will redirect to thank-you page via _next
             } else {
                 alert('Error submitting the form. Please try again later.');
             }
