@@ -224,14 +224,16 @@ function calculate() {
   let inversion = 0;
   if (consumo > 600) {
     inversion = kw * 300 + 2200 + 2900 + 150;
+    if (consumo > 400) {
+    inversion = kw * 300 + 2200 + 2500 + 150;
   } else if (consumo > 200) {
-    inversion = kw * 300 + 2100 + 2500 + 150;
+    inversion = kw * 300 + 500 + 650 + 650 + 650 + 150;
   } else if (consumo > 150) {
     inversion = kw * 300 + 500 + 650 + 650 + 150;
   } else if (consumo > 100) {
     inversion = kw * 300 + 500 + 650 + 150;
   } else {
-    inversion = kw * 300 + 500 + 600 + 150;
+    inversion = kw * 300 + 400 + 500 + 150;
   }
 
   // Payback
