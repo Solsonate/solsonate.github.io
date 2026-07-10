@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -192,39 +192,46 @@
 </div>
 
 <script>
-// Sincronizzazione slider ↔ numero
 const syncInputs = (rangeId, numId) => {
   const range = document.getElementById(rangeId);
-  const num   = document.getElementById(numId);
-  range.addEventListener('input', () => { num.value = range.value; calculate(); });
-  num.addEventListener('input',   () => { 
-    let val = parseFloat(num.value);
-    if (!isNaN(val)) range.value = Math.max(range.min, Math.min(range.max, val)); 
-    calculate(); 
+  const num = document.getElementById(numId);
+
+  if (!range || !num) return;
+
+  range.addEventListener('input', () => {
+    num.value = range.value;
+    calculate();
+  });
+
+  num.addEventListener('input', () => {
+    const val = parseFloat(num.value);
+    if (!Number.isNaN(val)) {
+      const min = parseFloat(range.min);
+      const max = parseFloat(range.max);
+      const clamped = Math.max(min, Math.min(max, val));
+      range.value = clamped;
+      num.value = clamped;
+    }
+    calculate();
   });
 };
 
-syncInputs('consumo',    'consumo_num');
-syncInputs('horas_sol',  'horas_sol_num');
+syncInputs('consumo', 'consumo_num');
+syncInputs('horas_sol', 'horas_sol_num');
 
-// Calcolo
 function calculate() {
-  let consumo   = parseFloat(document.getElementById('consumo').value)    || 100;
-  let horas_sol = parseFloat(document.getElementById('horas_sol').value)  || 5;
-  let tarifa    = parseFloat(document.getElementById('tarifa').value)     || 0.29;
+  const consumo = parseFloat(document.getElementById('consumo').value) || 100;
+  const horas_sol = parseFloat(document.getElementById('horas_sol').value) || 5;
+  const tarifa = parseFloat(document.getElementById('tarifa').value) || 0.29;
 
-  // Ahorro anual
-  let ahorroAnual = Math.floor(consumo * 12 * tarifa * 100) / 100;
+  const ahorroAnual = Math.round(consumo * 12 * tarifa * 100) / 100;
+  const base = consumo / 30 / horas_sol / 0.7;
+  const kw = Math.floor(base);
 
-  // Potenza base
-  let base = consumo / 30 / horas_sol / 0.7;
-  let kw   = Math.floor(base);
-
-  // Inversión con i tuoi IF
   let inversion = 0;
   if (consumo > 600) {
     inversion = kw * 300 + 2200 + 2900 + 150;
-    if (consumo > 400) {
+  } else if (consumo > 400) {
     inversion = kw * 300 + 2200 + 2500 + 150;
   } else if (consumo > 200) {
     inversion = kw * 300 + 500 + 650 + 650 + 650 + 150;
@@ -236,18 +243,15 @@ function calculate() {
     inversion = kw * 300 + 400 + 500 + 150;
   }
 
-  // Payback
-  let payback = (ahorroAnual > 0) ? (inversion / ahorroAnual).toFixed(1) : 0;
+  const payback = ahorroAnual > 0 ? (inversion / ahorroAnual).toFixed(1) : 0;
 
-  // Update DOM
   document.getElementById('inversion').textContent = '$' + Math.round(inversion).toLocaleString();
-  document.getElementById('ahorro').textContent    = '$' + ahorroAnual.toLocaleString('es', {minimumFractionDigits:2, maximumFractionDigits:2});
-  document.getElementById('payback').textContent   = payback + ' años';
+  document.getElementById('ahorro').textContent = '$' + ahorroAnual.toLocaleString('es', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  document.getElementById('payback').textContent = payback + ' años';
 }
 
-// Avvia e ascolta cambiamenti
 calculate();
-document.querySelectorAll('input').forEach(el => el.addEventListener('input', calculate));
+document.querySelectorAll('input').forEach((el) => el.addEventListener('input', calculate));
 </script>
 
 </body>
