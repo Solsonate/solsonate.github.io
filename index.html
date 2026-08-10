@@ -134,6 +134,62 @@
     <iframe src="calculadora-solar.html" title="Calculadora Solar" class="calculator-iframe"></iframe>
 </section>
 
+<section class="faq-section">
+    <h2 data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Preguntas Frecuentes</h2>
+    <div class="faq-accordion">
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+                <span data-en="What's the difference between an on-grid and a hybrid system?" data-es="¿Cuál es la diferencia entre un sistema on-grid y uno híbrido?">¿Cuál es la diferencia entre un sistema on-grid y uno híbrido?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer" data-en="An on-grid system only produces energy while connected to the power grid and shuts down automatically during a blackout, even if the sun is shining, for safety reasons. A hybrid system adds a battery and stays operational during outages, keeping your essential loads powered when the grid goes down." data-es="Un sistema on-grid solo produce energía mientras está conectado a la red eléctrica, y se apaga automáticamente durante un corte de luz, aunque haya sol, por razones de seguridad. Un sistema híbrido agrega una batería y sigue funcionando durante los apagones, manteniendo tus cargas esenciales con energía cuando la red falla.">Un sistema on-grid solo produce energía mientras está conectado a la red eléctrica, y se apaga automáticamente durante un corte de luz, aunque haya sol, por razones de seguridad. Un sistema híbrido agrega una batería y sigue funcionando durante los apagones, manteniendo tus cargas esenciales con energía cuando la red falla.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+                <span data-en="Do solar panels work when it's cloudy or raining?" data-es="¿Los paneles solares funcionan cuando está nublado o llueve?">¿Los paneles solares funcionan cuando está nublado o llueve?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer" data-en="Yes. Although production decreases, panels keep generating energy with diffuse light. Output can drop between 10% and 30%, but they continue producing clean energy." data-es="Sí. Aunque la producción disminuye, los paneles siguen generando energía con luz difusa. El rendimiento puede bajar entre un 10% y un 30%, pero continúan aportando energía limpia.">Sí. Aunque la producción disminuye, los paneles siguen generando energía con luz difusa. El rendimiento puede bajar entre un 10% y un 30%, pero continúan aportando energía limpia.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+                <span data-en="How long does it take to pay off a solar installation?" data-es="¿Cuánto tiempo se tarda en amortizar una instalación fotovoltaica?">¿Cuánto tiempo se tarda en amortizar una instalación fotovoltaica?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer" data-en="Typically between 2 and 7 years, depending on consumption and system size. After that, the energy generated is net savings." data-es="Normalmente entre 2 y 7 años, dependiendo del consumo y del tamaño del sistema. A partir de ahí, la energía generada es ahorro neto.">Normalmente entre 2 y 7 años, dependiendo del consumo y del tamaño del sistema. A partir de ahí, la energía generada es ahorro neto.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+                <span data-en="Can I add solar batteries later?" data-es="¿Es posible instalar baterías solares más adelante?">¿Es posible instalar baterías solares más adelante?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer" data-en="Yes. Installations are scalable: you can start with the panels and add batteries later to make better use of production and increase self-consumption." data-es="Sí. Las instalaciones son escalables: puedes empezar con los paneles y añadir baterías más adelante para aprovechar mejor la producción y aumentar el autoconsumo.">Sí. Las instalaciones son escalables: puedes empezar con los paneles y añadir baterías más adelante para aprovechar mejor la producción y aumentar el autoconsumo.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+                <span data-en="What is the lifespan of solar panels?" data-es="¿Cuál es la vida útil de los paneles solares?">¿Cuál es la vida útil de los paneles solares?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer" data-en="Between 25 and 30 years. With good maintenance, they continue producing with high efficiency for decades." data-es="Entre 25 y 30 años. Con un buen mantenimiento, continúan produciendo con gran eficiencia durante décadas.">Entre 25 y 30 años. Con un buen mantenimiento, continúan produciendo con gran eficiencia durante décadas.</p>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  item.classList.toggle('is-open', !expanded);
+}
+</script>
+
 <footer>
     <div class="footer-top">
         <div id="contact" class="contact">
