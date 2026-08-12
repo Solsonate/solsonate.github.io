@@ -454,4 +454,33 @@ footer a:hover, footer a:focus { text-decoration: underline; }
 }
 .faq-item.is-open .faq-answer {
     display: block;
+}*
+/* Header: logo como link, sin estilo azul de link por defecto */
+header .header-logo {
+  text-decoration: none;
+  color: inherit;
+}
+header .header-logo span {
+  color: #1f2937;
+}
+
+/* Header: contenedor de nav + CTA, con separacion entre elementos */
+header .header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Header: link "Productos", gris, sin subrayado */
+header .header-nav-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+header .header-nav-link:hover,
+header .header-nav-link:focus {
+  color: #1f2937;
+  outline: none;
 }
