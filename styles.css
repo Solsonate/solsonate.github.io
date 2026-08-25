@@ -454,7 +454,7 @@ footer a:hover, footer a:focus { text-decoration: underline; }
 }
 .faq-item.is-open .faq-answer {
     display: block;
-}*
+}
 /* Header: logo como link, sin estilo azul de link por defecto */
 header .header-logo {
   text-decoration: none;
@@ -483,4 +483,11 @@ header .header-nav-link:hover,
 header .header-nav-link:focus {
   color: #1f2937;
   outline: none;
+}
+/* Justificar parrafos de contenido (no botones, titulos ni footer) */
+.main-content p,
+.info-module p,
+.faq-answer {
+    text-align: justify;
+    text-justify: inter-word;
 }
