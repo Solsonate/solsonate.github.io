@@ -229,10 +229,12 @@ function calculate() {
   const kw = Math.floor(base);
 
   let inversion = 0;
-  if (consumo > 600) {
-    inversion = kw * 300 + 2200 + 2900 + 150;
+  if (consumo > 900) {
+    inversion = kw * 300 + 2300 + 2900 + 2900 + 150;
+  } else if (consumo > 600) {
+    inversion = kw * 300 + 2300 + 2900 + 150;
   } else if (consumo > 400) {
-    inversion = kw * 300 + 2200 + 2500 + 150;
+    inversion = kw * 300 + 2300 + 2700 + 150;
   } else if (consumo > 200) {
     inversion = kw * 300 + 500 + 650 + 650 + 650 + 150;
   } else if (consumo > 150) {
