@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index-thankyou.html
+
+Sitemap: https://solsonate.store/sitemap.xml
